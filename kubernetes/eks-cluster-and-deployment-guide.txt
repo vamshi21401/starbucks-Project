@@ -94,8 +94,11 @@ Create credentials to connect with your aws account
 # Step - 3 : Create EKS Cluster using eksctl # 
 **Syntax:** 
 
-eksctl create cluster --name cluster-name  \
---region region-name \
+eksctl create cluster --name=vamshi \
+--region=ap-south-1 \
+--zones=ap-south-1a,ap-south-1b \
+--version=1.30 \
+--without-nodegroup
 --node-type instance-type \
 --nodes-min 2 \
 --nodes-max 2 \ 
@@ -160,3 +163,4 @@ You have successfully created an EKS cluster with 2 nodes in AWS using eksctl. Y
 eksctl delete cluster --name cloudaseem-cluster4 --region ap-south-1
 
 ```
+
